@@ -122,31 +122,6 @@ Index = {}; Taxon = {}; coef = {}; Taxon = {}; taxon = []
 pathLengths= {}
 
 for i in open(samplefile):
-    """
-    if match('Taxon:', i):
-        x = i.split()
-        x.remove('Taxon:')
-        #x = [string.lower() for string in x]  
-
-        for i in x:
-            taxon.append(i)
-            j = x.index(i)
-            Index[i] = j + 1
-        continue
-
-    elif match('Coefficients:', i):
-        x = i.split()
-        x.remove('Coefficients:')
-        x = map(eval, x)
-        
-        for t in taxon:
-            i = taxon.index(t)
-            coef[t] = sum(x[i:])
-            pathLengths[t] = x[i]
-
-        continue
-    """
-    
     if batch == 'y':
         j = i.strip()
         Files.append(j)
@@ -170,7 +145,7 @@ for i in open(popfile):
     elif match('Coefficients:', i):
         x = i.split()
         x.remove('Coefficients:')
-        x = map(eval, x)
+        x = list(map(eval, x))
         
         for t in taxon:
             i = taxon.index(t)
