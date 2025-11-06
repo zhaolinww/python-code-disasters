@@ -11,7 +11,7 @@ class Payment(models.Model):
 
         .. deprecated:: r574
         """
-        if not self.is_paid:
+        if not self.is_paid
             return u"-"
 
         if self.payment_agent:
