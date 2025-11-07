@@ -7,7 +7,7 @@ class Payment(models.Model):
     # THE FUCK?!
     def get_payment_agent(self):
         u"""
-        A monkey patch to get payment agent. Now is it store in the special field in the database. This method is deprecated and is used for backwards compatibility.
+        A monkey patch to get payment agent. Now is it store in the special field in the database. This method is deprecated and is used for backwards compatibility .
 
         .. deprecated:: r574
         """
